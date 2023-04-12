@@ -23,3 +23,13 @@ pipeline{
         }
     }
 }
+
+
+
+-------------------------
+
+stage("terraform init") {
+            steps {
+                 echo "..................Terraform init.................."
+               powershell 'terraform init'
+            }
