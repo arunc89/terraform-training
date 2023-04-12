@@ -1,0 +1,25 @@
+pipeline{
+    agent any
+    tools {
+     terraform 'Terraform'
+    }
+}
+
+
+checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/NishantGupta99/terraform-ec2-demo.git']]])
+from Nishant to everyone:    12:20 PM
+pipeline{
+    agent any
+    tools {
+     terraform 'Terraform'
+    }
+    
+    stages {
+        stage('checkout') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/NishantGupta99/terraform-ec2-demo.git']]])
+                
+            }
+        }
+    }
+}
