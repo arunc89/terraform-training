@@ -4,17 +4,17 @@ variable "vpc-cidr" {
 }
 
 variable "ami_id" {
-    default = "ami-007855ac798b5175e"
+    default = "ami-07d3a50bd29811cd1"
 }
 
 variable "security_group" {
-    default = "nishant-ssh-security-group"
+    default = "arun-ssh-security-group"
 }
 variable "instance_type" {
     default = "t2.micro"
 }
 variable "key_name" {
-    default = "nishant-keypair-terraform"
+    default = "arun-keypair-terraform"
 }
 
 
