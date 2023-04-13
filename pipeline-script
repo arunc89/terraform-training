@@ -5,9 +5,7 @@ pipeline{
     }
 }
 
-
 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/NishantGupta99/terraform-ec2-demo.git']]])
-from Nishant to everyone:    12:20 PM
 pipeline{
     agent any
     tools {
@@ -23,10 +21,6 @@ pipeline{
         }
     }
 }
-
-
-
--------------------------
 
 stage("terraform init") {
             steps {
